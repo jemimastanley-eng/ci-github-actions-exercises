@@ -13,7 +13,7 @@ describe('App component', ()=> {
     mockPingApi.mockResolvedValue({})
     const { getAllByText} = render(<App />)
     await waitFor(() => {
-      const welcomeElements = getAllByText(/Welcome to/i)
+      const welcomeElements = getAllByText(/Welcome not to/i)
       expect(welcomeElements.length).toBe(2)
       expect(welcomeElements[0]).toBeInTheDocument()
       expect(welcomeElements[1]).toBeInTheDocument()
